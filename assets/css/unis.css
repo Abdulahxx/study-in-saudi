@@ -1,0 +1,27 @@
+/* === Шаг 3: вузы === */
+.uni-hero .flag, .page-hero h1 .flag { width: 1.1em; height: auto; vertical-align: -.1em; border-radius: 3px; }
+.uni-main { padding-top: 0; }
+.uni-content { display: grid; gap: 40px; min-width: 0; }
+.uni-block h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-bottom: .6em; }
+.uni-block p { margin-bottom: 1em; }
+.uni-faculties { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.uni-faculties .aside-card { padding: 22px; box-shadow: var(--shadow-sm); }
+.uni-faculties .aside-card h3 { font-size: 1.1rem; margin-bottom: .8em; }
+.uni-aside__link { margin: 14px 0 20px; text-align: center; }
+.aside-card h4 { margin: 0 0 .6em; }
+.uni-card .chips { gap: 6px; }
+.uni-card .chip { font-size: .78rem; padding: 3px 10px; }
+@media (max-width: 639px) { .uni-faculties { grid-template-columns: 1fr; } }
+
+/* На телефоне города листаются одной строкой, а не занимают пол-экрана */
+@media (max-width: 639px) {
+  .toolbar .chips {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    margin: 0 -20px; padding: 2px 20px 6px; scroll-snap-type: x proximity;
+  }
+  .toolbar .chips::-webkit-scrollbar { display: none; }
+  .toolbar .chip { flex: none; scroll-snap-align: start; }
+}
+.uni-hero__credit{position:absolute;right:12px;bottom:8px;z-index:2;margin:0;font-size:.72rem;opacity:.85;color:#F0E3CF}
+.uni-hero__credit a{color:#F0E3CF;text-decoration:underline}
+.photo-note{margin:24px 0 0;font-size:.78rem;color:var(--muted);text-align:center}
